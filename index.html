@@ -105,10 +105,9 @@ section{padding:84px 0}
 .steps{background:none;border:0;margin-top:0}
 .step{display:grid;grid-template-columns:64px 1fr;gap:4px 20px;padding:26px 0;align-items:start;border:0;border-bottom:1px solid rgba(25,56,148,.16)}
 .step:last-child{border-bottom:0}
-.step .n{font-family:'Roboto Condensed';font-weight:800;font-size:44px;line-height:1;color:var(--navy);grid-row:span 2}
-.step h3{font-size:23px;color:var(--navy)}
-.step p{font-size:15px;color:#3D4E63;font-family:'Roboto Condensed';font-weight:400;margin-top:6px}
-.step span{grid-column:2;font-size:11px;letter-spacing:.26em;color:var(--sky);font-weight:800;margin-top:10px}
+.step .n{grid-column:1;grid-row:1 / span 2;font-family:'Roboto Condensed';font-weight:800;font-size:44px;line-height:1;color:var(--navy)}
+.step div{grid-column:2;min-width:0}
+.step > span:last-child{grid-column:2;font-size:11px;letter-spacing:.26em;color:var(--sky);font-weight:800;margin-top:10px}
 .final{margin-top:48px;background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory);padding:72px 48px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;border-radius:22px}
 .final h2{font-size:clamp(30px,4vw,46px);max-width:20ch}
 .final p{color:#D5DEE8;font-family:'Roboto Condensed';font-weight:400;margin-top:10px;font-size:17px}
