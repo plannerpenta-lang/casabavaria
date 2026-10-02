@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Casa Bavaria 2027 — El plan que cambia todos los planes</title>
+<style>
+@font-face{font-family:'Guthen';src:url('fonts/Guthen%20Jaqueline%20Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('fonts/RobotoCondensed-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('fonts/RobotoCondensed-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('fonts/RobotoCondensed-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('fonts/RobotoSlab-Light.ttf') format('truetype');font-weight:300;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('fonts/RobotoSlab-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+:root{
+  --navy:#193894; --navy-2:#0F2566; --blue:#1100FF; --sky:#009BFF; --cyan:#00EAE7;
+  --ivory:#FAF7F0; --line:rgba(25,56,148,.22); --line-light:rgba(0,234,231,.35);
+  --red:#C4122E; --ink:#141414; --muted:#5A6575;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto Condensed',Arial,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--navy);color:var(--cyan)}
+:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+h1,h2,h3{font-family:'Roboto Condensed',Arial-sans-serif;font-weight:800;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+.script{font-family:'Guthen',cursive;font-weight:400;text-transform:none;letter-spacing:0;display:block;line-height:1}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyeline{width:56px;height:2px;background:var(--cyan);margin-bottom:18px}
+header{background:transparent;border-bottom:1px solid transparent;position:fixed;top:0;left:0;right:0;z-index:40;transition:background .3s ease,border-color .3s ease}
+header.scrolled{background:rgba(25,56,148,.96);border-bottom-color:rgba(255,255,255,.18);backdrop-filter:blur(10px)}
+.bar{max-width:1080px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand-seal{width:44px;height:44px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;font-family:'Roboto Condensed';font-weight:800;color:#fff;font-size:18px;background:rgba(255,255,255,.12)}
+.brand b{font-family:'Roboto Condensed';font-weight:800;font-size:14px;letter-spacing:.22em;color:#fff}
+.brand small{display:block;font-family:'Roboto Condensed';font-size:10px;letter-spacing:.3em;color:rgba(255,255,255,.75)}
+nav{display:flex;gap:26px;align-items:center;font-size:12px;letter-spacing:.18em;font-weight:500}
+nav a{text-decoration:none;color:#fff}
+nav a:hover{color:var(--cyan)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-size:12px;letter-spacing:.16em;font-weight:600;padding:14px 26px;text-decoration:none;border:1px solid #8E0C20}
+.btn:hover{background:#A50E25}
+#menuBtn{display:none;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.5);padding:8px 12px}
+.hero{background:#0B1220;color:var(--ivory);text-align:center;position:relative;overflow:hidden;isolation:isolate;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.hero-foto{position:absolute;inset:0;z-index:-2;background:#0B1220 url('imgs/hero-hotel.png') center 62%/cover no-repeat}
+.hero-foto::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(6,9,18,.68) 0%,rgba(6,9,18,0) 24%,rgba(6,9,18,0) 72%,rgba(6,9,18,.7) 100%),
+  radial-gradient(115% 85% at 50% 45%,rgba(6,9,18,.24) 0%,rgba(6,9,18,.55) 52%,rgba(5,7,14,.9) 100%)}
+.hero-textura{position:absolute;inset:0;z-index:-1;background:url('imgs/textura-1.png') center/cover;opacity:.16;mix-blend-mode:soft-light}
+.hero-sello{position:absolute;right:36px;bottom:32px;width:100px;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.5))}
+.hero-inner{position:relative;max-width:1080px;width:100%;margin:0 auto;padding:132px 28px 64px}
+.hero-kicker{font-family:'Roboto Condensed';font-weight:400;font-size:20px;letter-spacing:.28em;color:#fff;text-align:center;margin:0 0 28px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.hero-lockup{margin:0 auto;max-width:420px}
+.hero-lockup img{width:100%;height:auto;display:block;filter:brightness(0) invert(1) drop-shadow(0 16px 36px rgba(0,0,0,.55))}
+.hero-script{font-family:'Guthen',cursive;font-weight:400;font-size:68px;line-height:1.1;color:#fff;text-align:center;margin:32px auto 0;max-width:20ch;text-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero-sub2{max-width:52ch;margin:20px auto 0;font-family:'Roboto Condensed';font-weight:400;font-size:24px;line-height:1.45;color:rgba(255,255,255,.9);text-align:center;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero-sub2 em{font-style:normal;color:var(--cyan)}
+.hero p strong{color:#fff;font-weight:400}
+.hero-cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.ghost{color:var(--ivory);font-size:12px;letter-spacing:.16em;text-decoration:none;border-bottom:1px solid var(--cyan);padding-bottom:4px}
+section{padding:84px 0}
+.sec-head{max-width:680px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);color:var(--navy)}
+.sec-head p{margin-top:14px;color:var(--muted);font-family:'Roboto Condensed';font-weight:500;font-size:17px}
+.exp-sec{background:#FFFFFF;color:var(--ink);position:relative;overflow:hidden}
+.exp-sec::before{content:"";position:absolute;inset:0;background:url('imgs/textura-2.png') center/cover;opacity:.07;mix-blend-mode:multiply}
+.exp-curvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.exp-sec>.wrap{position:relative}
+.exp-head{display:block}
+.exp-dash{width:64px;height:3px;background:var(--cyan);margin-bottom:20px}
+.exp-kicker{font-family:'Roboto Condensed';font-weight:800;font-size:clamp(32px,4vw,46px);letter-spacing:.05em;color:var(--navy);text-transform:uppercase;line-height:1.05}
+.exp-script{font-family:'Guthen',cursive;font-weight:400;font-size:clamp(76px,9vw,124px);line-height:.9;color:#1D4ED8;margin-top:-4px}
+.exp-sec .sec-head p{color:#4A5A6E;font-weight:400;font-size:18px;max-width:56ch;margin-top:20px}
+.exp-grid{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:24px;margin-top:48px}
+.exp-card{position:relative;border-radius:16px;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;background:#0B1220}
+.exp-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.exp-card:hover>img{transform:scale(1.05)}
+.exp-cap{position:relative;z-index:2;width:100%;padding:130px 26px 28px;background:linear-gradient(180deg,rgba(6,10,20,0) 0%,rgba(6,10,20,.78) 46%,rgba(6,10,20,.94) 100%)}
+.exp-icon{width:40px;height:40px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.exp-card h3{color:#fff;font-size:23px;margin-top:14px;max-width:15ch}
+.exp-rule{width:36px;height:2px;background:var(--cyan);margin:14px 0}
+.exp-card p{color:#D5DEE8;font-family:'Roboto Condensed';font-weight:400;font-size:16px;line-height:1.5;max-width:36ch}
+.sonido{background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory)}
+.sonido h2{color:#fff}
+.sonido .sec-head p{color:#fff}
+.track{display:grid;grid-template-columns:220px 1fr auto;gap:26px;align-items:center;padding:22px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(255,255,255,.05);margin-top:20px;transition:border-color .25s,background .25s}
+.track:first-of-type{margin-top:40px}
+.track:hover{border-color:rgba(0,234,231,.5)}
+.track.playing{border-color:var(--cyan);background:rgba(0,234,231,.07)}
+.track-cover{position:relative;border-radius:12px;overflow:hidden;line-height:0}
+.track-cover img{width:220px;height:150px;object-fit:cover;display:block}
+.track-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,20,0) 40%,rgba(6,10,20,.55) 100%)}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:60px;height:60px;border-radius:50%;border:0;background:var(--cyan);color:var(--navy-2);font-size:18px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .2s}
+.play:hover{transform:translate(-50%,-50%) scale(1.08)}
+.play[aria-pressed="true"]{background:#fff}
+.track-no{font-size:11px;letter-spacing:.3em;color:var(--cyan);font-weight:800}
+.track h3{font-size:24px;color:#fff;margin-top:6px}
+.track p{font-size:15px;color:#D5DEE8;font-family:'Roboto Condensed';font-weight:400;margin-top:6px}
+.time{font-size:12px;letter-spacing:.14em;color:var(--cyan);border:1px solid rgba(0,234,231,.4);padding:8px 14px;border-radius:999px;white-space:nowrap}
+.bars{display:flex;gap:4px;margin-top:14px;height:32px;align-items:end}
+.bars i{width:4px;background:var(--cyan);opacity:.55;min-height:4px;border-radius:2px}
+.playing .bars i{opacity:1;animation:eq 1s ease-in-out infinite alternate}
+.playing .bars i:nth-child(2n){animation-delay:.12s}.playing .bars i:nth-child(3n){animation-delay:.28s}.playing .bars i:nth-child(4n){animation-delay:.4s}
+@keyframes eq{from{transform:scaleY(.4)}to{transform:scaleY(1)}}
+.steps{margin-top:36px;border:1px solid var(--line);background:#fff}
+.step{display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:26px 30px;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:0}
+.step .n{font-family:'Roboto Condensed';font-weight:800;font-size:34px;color:var(--navy)}
+.step h3{font-size:18px;color:var(--navy)}
+.step p{font-size:14px;color:var(--muted)}
+.step span{font-size:11px;letter-spacing:.2em;color:var(--navy);border:1px solid var(--line);padding:8px 12px}
+.part-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:stretch;margin-top:36px}
+.part-grid>img{width:100%;height:100%;min-height:420px;object-fit:cover;border:1px solid var(--line);display:block}
+.final{margin-top:28px;background:var(--navy);color:var(--ivory);padding:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border:1px solid var(--cyan)}
+.final h2{font-size:clamp(26px,3.5vw,38px)}
+.final p{color:#B9C3D4;font-family:'Roboto Condensed';font-weight:500;margin-top:8px}
+.step p,.hero-nota{font-weight:500}
+footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:900px){
+  nav{display:none;position:absolute;top:76px;left:16px;right:16px;background:var(--navy);border:1px solid var(--line-light);padding:16px;flex-direction:column}
+  nav.open{display:flex}#menuBtn{display:block}
+  .exp-grid{grid-template-columns:1fr;gap:28px;margin-top:36px}
+  .exp-card{min-height:420px}
+  .exp-head{display:block}
+  .exp-script{font-size:72px}
+  .step{grid-template-columns:48px 1fr}.step span{grid-column:2}
+  .track{grid-template-columns:1fr}
+  .track-cover img{width:100%;height:200px}
+  .time{justify-self:start}
+  .part-grid{grid-template-columns:1fr}.part-grid>img{min-height:280px}
+  section{padding:60px 0}.final{padding:32px 24px}
+  .hero-inner{padding:110px 20px 56px}
+  .hero-script{font-size:48px;margin-top:24px}
+  .hero-sub2{font-size:19px;max-width:38ch}
+  .hero-kicker{font-size:16px;letter-spacing:.22em}
+  .hero-sello{right:16px;bottom:16px;width:96px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="#plan"><img src="imgs/LOGO-BLANCO.png" alt="Bavaria" style="height:22px;width:auto;display:block"></a>
+  <nav id="menu"><a href="#plan">EL PLAN</a><a href="#experiencia">EXPERIENCIA</a><a href="#participar">CÓMO PARTICIPAR</a><a class="btn" href="#participar">INSCRIBE TU FACTURA</a></nav>
+  <button id="menuBtn" aria-label="Menú">☰</button>
+</div></header>
+
+<div class="hero" id="plan">
+  <div class="hero-foto" role="img" aria-label="Casa Bavaria al atardecer, vista aérea con piscinas"></div>
+  <div class="hero-textura" aria-hidden="true"></div>
+  <img class="hero-sello" src="imgs/SELLO-CASA-BAVARIA-BN.png" alt="Sello Casa Bavaria 2027">
+  <div class="hero-inner">
+    <p class="hero-kicker">Casa Bavaria 2027</p>
+    <h1 class="hero-lockup">
+      <img src="imgs/el-plan.png" alt="El Plan — Que cambia todos los planes">
+    </h1>
+    <p class="hero-script">Tres días. Vos. Tus 10.</p>
+    <p class="hero-sub2">Un plan que no se parece a ningún otro y que solo va a vivir el <em>0,00021%</em> del país.</p>
+    <div class="hero-cta"><a class="btn" href="#participar">INSCRIBE TU FACTURA</a></div>
+  </div>
+</div>
+
+<section class="exp-sec" id="experiencia">
+  <svg class="exp-curvas" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-40,620 C300,540 520,660 820,570 C1010,520 1120,550 1260,490" fill="none" stroke="#00EAE7" stroke-width="1.5" opacity=".35"/>
+    <path d="M-40,180 C250,250 470,150 720,210" fill="none" stroke="#00EAE7" stroke-width="1.5" opacity=".25"/>
+  </svg>
+<div class="wrap">
+  <div class="exp-head">
+    <div class="sec-head"><div class="exp-dash"></div><h2 class="exp-kicker">Así se vive</h2>
+    <span class="exp-script">El Plan</span>
+    <p>Comida increíble, música, descanso, cerveza, atardeceres, felicidad, risas y tantos momentos únicos que solo quienes lo viven, lo entienden.</p></div>
+  </div>
+  <div class="exp-grid">
+    <article class="exp-card">
+      <img src="imgs/exp-chef.png" alt="Chef privado emplatando en Casa Bavaria">
+      <div class="exp-cap">
+        <svg class="exp-icon" viewBox="0 0 24 24"><path d="M4 18h16"/><path d="M12 9a7 7 0 0 1 7 7H5a7 7 0 0 1 7-7z"/><path d="M12 9V7"/><circle cx="12" cy="5.5" r="1"/></svg>
+        <h3>Chef privado, 24 / 7</h3>
+        <div class="exp-rule"></div>
+      </div>
+    </article>
+    <article class="exp-card">
+      <img src="imgs/exp-transporte.png" alt="Llegada privada frente al mar">
+      <div class="exp-cap">
+        <svg class="exp-icon" viewBox="0 0 24 24"><path d="M3 16v-3l2-4 4-2h6l4 3h2v6"/><path d="M3 16h18"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/></svg>
+        <h3>Transporte privado, en tierra y agua</h3>
+        <div class="exp-rule"></div>
+      </div>
+    </article>
+    <article class="exp-card">
+      <img src="imgs/exp-atardecer.png" alt="Cabalgata al atardecer en la playa">
+      <div class="exp-cap">
+        <svg class="exp-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+        <h3>Atardeceres, cabalgatas y cine en la playa</h3>
+        <div class="exp-rule"></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="sonido"><div class="wrap">
+  <div class="sec-head"><div class="exp-dash"></div><h2 class="exp-kicker" style="color:#fff">Así suena</h2>
+  <span class="exp-script" style="color:var(--cyan)">El Plan</span>
+  <p>El mar, las risas, la música, una cerveza que se abre, la noche empezando. Pequeños sonidos de Casa Bavaria para sentir que ya estás un poco más cerca.</p></div>
+  <div class="track" id="t1">
+    <div class="track-cover">
+      <img src="imgs/titulo-experiencia.png" alt="Pareja brindando con Bavaria en la playa">
+      <button class="play" data-t="t1" aria-pressed="false" aria-label="Reproducir amanecer">▶</button>
+    </div>
+    <div><span class="track-no">01 · AMANECER</span><h3>Así suena el amanecer</h3><p>Pareja en la playa, brisa y primer brindis del día.</p><div class="bars"><i style="height:40%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:75%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:45%"></i><i style="height:65%"></i><i style="height:80%"></i></div></div>
+    <span class="time" data-c>00:00 / 00:42</span>
+    <audio preload="none"><source src="amanecer.mp3"></audio>
+  </div>
+  <div class="track" id="t2">
+    <div class="track-cover">
+      <img src="imgs/titulo-sonido.png" alt="Amigos brindando con Bavaria al atardecer">
+      <button class="play" data-t="t2" aria-pressed="false" aria-label="Reproducir noche">▶</button>
+    </div>
+    <div><span class="track-no">02 · NOCHE</span><h3>Así suena la noche</h3><p>Amigos, brindis en el mar y atardecer dorado.</p><div class="bars"><i style="height:65%"></i><i style="height:35%"></i><i style="height:85%"></i><i style="height:50%"></i><i style="height:95%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:75%"></i><i style="height:55%"></i></div></div>
+    <span class="time" data-c>00:00 / 00:57</span>
+    <audio preload="none"><source src="noche.mp3"></audio>
+  </div>
+</div></section>
+
+<section id="participar"><div class="wrap">
+  <div class="sec-head"><div class="eyeline"></div><h2>Cómo participar para ganar el plan</h2><p>Sin enredos: compra, registra y haz maleta.</p></div>
+  <div class="part-grid">
+  <div class="steps" style="margin-top:0">
+    <div class="step"><span class="n">1</span><div><h3>Compra un six pack de Bavaria</h3><p>Guarda tu factura. Es tu pase a Casa Bavaria 2027.</p></div><span>TIENDA / BAR</span></div>
+    <div class="step"><span class="n">2</span><div><h3>Registra tu factura por WhatsApp o aquí</h3><p>Foto clara de la factura. Más facturas, más oportunidades.</p></div><span>WHATSAPP + WEB</span></div>
+    <div class="step"><span class="n">3</span><div><h3>Prepárate para cambiar los planes</h3><p>3 días para ti y 10 personas. Nosotros ponemos el resto.</p></div><span>TÚ + 10</span></div>
+  </div>
+  <img src="imgs/titulo-participar.png" alt="Lata Bavaria Gold en la espuma del mar">
+  </div>
+  <div class="final"><div><h2>Regístrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p></div><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a></div>
+</div></section>
+<footer>CASA BAVARIA 2027 · EL EXCESO DE ALCOHOL ES PERJUDICIAL · SOLO +18</footer>
+<script>
+document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('open');
+const header=document.querySelector('header');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.querySelectorAll('.play').forEach(b=>{b.onclick=()=>{
+  const card=document.getElementById(b.dataset.t),a=card.querySelector('audio'),c=card.querySelector('[data-c]');
+  const was=card.classList.contains('playing');
+  document.querySelectorAll('.track.playing').forEach(p=>{p.classList.remove('playing');p.querySelector('.play').textContent='▶';p.querySelector('audio').pause()});
+  if(was)return;card.classList.add('playing');b.textContent='⏸';b.setAttribute('aria-pressed','true');
+  let s=0;const tot=b.dataset.t==='t1'?42:57;
+  const sim=()=>{if(!card.classList.contains('playing'))return;s++;c.textContent='00:'+String(s).padStart(2,'0')+' / 00:'+tot;if(s<tot)setTimeout(sim,600);else{card.classList.remove('playing');b.textContent='▶'}};
+  const pr=a.play();if(pr&&pr.then)pr.then(()=>{a.ontimeupdate=()=>{c.textContent='00:'+String(Math.floor(a.currentTime)).padStart(2,'0')+' / 00:'+tot};a.onended=()=>{card.classList.remove('playing');b.textContent='▶'}}).catch(sim);else sim();
+}});
+</script>
+</body>
+</html>
