@@ -108,13 +108,15 @@ section{padding:84px 0}
 .step .n{grid-column:1;grid-row:1 / span 2;font-family:'Roboto Condensed';font-weight:800;font-size:44px;line-height:1;color:var(--navy)}
 .step div{grid-column:2;min-width:0}
 .step > span:last-child{grid-column:2;font-size:11px;letter-spacing:.26em;color:var(--sky);font-weight:800;margin-top:10px}
-.final{margin-top:48px;background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory);padding:72px 48px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;border-radius:22px}
+#participar{padding-bottom:0}
+.final{margin-top:64px;background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory);padding:88px 0}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
 .final h2{font-size:clamp(30px,4vw,46px);max-width:20ch}
 .final p{color:#D5DEE8;font-family:'Roboto Condensed';font-weight:400;margin-top:10px;font-size:17px}
 .final .btn{margin-top:22px;font-size:14px;padding:18px 38px}
 .final p{color:#fff;font-family:'Roboto Condensed';font-weight:500;margin-top:8px}
 .step p,.hero-nota{font-weight:500}
-footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:var(--muted);border-top:1px solid var(--line)}
+footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:#9DB1D6;background:var(--navy-2)}
 @media(max-width:900px){
   nav{display:none;position:absolute;top:76px;left:16px;right:16px;background:var(--navy);border:1px solid var(--line-light);padding:16px;flex-direction:column}
   nav.open{display:flex}#menuBtn{display:block}
@@ -236,8 +238,11 @@ footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:
   </div>
   <img src="imgs/titulo-participar.png" alt="Lata Bavaria Gold en la espuma del mar">
   </div>
-  <div class="final"><div><h2>Regístrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p></div><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a></div>
-</div></section>
+</div>
+  <div class="final"><div class="wrap">
+    <h2>Regístrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a>
+  </div></div>
+</section>
 <footer>CASA BAVARIA 2027 · EL EXCESO DE ALCOHOL ES PERJUDICIAL · SOLO +18</footer>
 <script>
 document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('open');
