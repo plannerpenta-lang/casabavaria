@@ -44,9 +44,8 @@ nav a:hover{color:var(--cyan)}
   linear-gradient(180deg,rgba(6,9,18,.68) 0%,rgba(6,9,18,0) 24%,rgba(6,9,18,0) 72%,rgba(6,9,18,.7) 100%),
   radial-gradient(115% 85% at 50% 45%,rgba(6,9,18,.24) 0%,rgba(6,9,18,.55) 52%,rgba(5,7,14,.9) 100%)}
 .hero-textura{position:absolute;inset:0;z-index:-1;background:url('imgs/textura-1.png') center/cover;opacity:.16;mix-blend-mode:soft-light}
-.hero-sello{position:absolute;right:36px;bottom:32px;width:100px;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.5))}
+.hero-sello-top{display:block;width:120px;height:auto;margin:0 auto 28px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.5))}
 .hero-inner{position:relative;max-width:1080px;width:100%;margin:0 auto;padding:132px 28px 64px}
-.hero-kicker{font-family:'Roboto Condensed';font-weight:400;font-size:20px;letter-spacing:.28em;color:#fff;text-align:center;margin:0 0 28px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .hero-lockup{margin:0 auto;max-width:420px}
 .hero-lockup img{width:100%;height:auto;display:block;filter:brightness(0) invert(1) drop-shadow(0 16px 36px rgba(0,0,0,.55))}
 .hero-script{font-family:'Guthen',cursive;font-weight:400;font-size:68px;line-height:1.1;color:#fff;text-align:center;margin:32px auto 0;max-width:20ch;text-shadow:0 4px 20px rgba(0,0,0,.4)}
@@ -135,8 +134,7 @@ footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:
   .hero-inner{padding:110px 20px 56px}
   .hero-script{font-size:48px;margin-top:24px}
   .hero-sub2{font-size:19px;max-width:38ch}
-  .hero-kicker{font-size:16px;letter-spacing:.22em}
-  .hero-sello{right:16px;bottom:16px;width:96px}
+  .hero-sello-top{width:90px;margin-bottom:22px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
@@ -151,9 +149,8 @@ footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:
 <div class="hero" id="plan">
   <div class="hero-foto" role="img" aria-label="Casa Bavaria al atardecer, vista aérea con piscinas"></div>
   <div class="hero-textura" aria-hidden="true"></div>
-  <img class="hero-sello" src="imgs/SELLO-CASA-BAVARIA-BN.png" alt="Sello Casa Bavaria 2027">
   <div class="hero-inner">
-    <p class="hero-kicker">Casa Bavaria 2027</p>
+    <img class="hero-sello-top" src="imgs/SELLO-CASA-BAVARIA-BN.png" alt="Sello Casa Bavaria 2027">
     <h1 class="hero-lockup">
       <img src="imgs/el-plan.png" alt="El Plan — Que cambia todos los planes">
     </h1>
