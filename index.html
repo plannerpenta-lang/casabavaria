@@ -107,6 +107,8 @@ section{padding:84px 0}
 .step .n{grid-column:1;grid-row:1 / span 2;font-family:'Roboto Condensed';font-weight:800;font-size:44px;line-height:1;color:var(--navy)}
 .step div{grid-column:2;min-width:0}
 .step > span:last-child{grid-column:2;font-size:11px;letter-spacing:.26em;color:var(--sky);font-weight:800;margin-top:10px}
+.mini-btn{display:inline-block;background:var(--red);color:#fff;font-size:.72em;letter-spacing:.1em;font-weight:700;padding:.35em 1em;border-radius:8px;text-decoration:none;vertical-align:baseline;white-space:nowrap}
+.mini-btn:hover{background:#A50E25}
 #participar{padding-bottom:0}
 .final{margin-top:64px;background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory);padding:88px 0}
 .final .wrap{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
@@ -230,13 +232,13 @@ footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:
   <div class="part-grid">
   <div class="steps" style="margin-top:0">
     <div class="step"><span class="n">1</span><div><h3>Comprá un six pack de Bavaria</h3><p>Guardá tu factura. Es tu pase a Casa Bavaria 2027.</p></div><span>TIENDA / BAR</span></div>
-    <div class="step"><span class="n">2</span><div><h3>Registrá tu factura por WhatsApp o aquí</h3><p>Foto clara de la factura. Más facturas, más oportunidades.</p></div><span>WHATSAPP + WEB</span></div>
+    <div class="step"><span class="n">2</span><div><h3>Registrá tu factura por WhatsApp o <a class="mini-btn" href="#registrar">aquí</a></h3><p>Foto clara de la factura. Más facturas, más oportunidades.</p></div><span>WHATSAPP + WEB</span></div>
     <div class="step"><span class="n">3</span><div><h3>Preparate para cambiar los planes</h3><p>3 días para vos y 10 personas. Nosotros ponemos el resto.</p></div><span>TÚ + 10</span></div>
   </div>
   <img src="imgs/titulo-participar.png" alt="Lata Bavaria Gold en la espuma del mar">
   </div>
 </div>
-  <div class="final"><div class="wrap">
+  <div class="final" id="registrar"><div class="wrap">
     <h2>Registrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a>
   </div></div>
 </section>
