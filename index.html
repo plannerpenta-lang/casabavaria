@@ -117,7 +117,14 @@ section{padding:84px 0}
 .final .btn{margin-top:22px;font-size:14px;padding:18px 38px}
 .final p{color:#fff;font-family:'Roboto Condensed';font-weight:500;margin-top:8px}
 .step p,.hero-nota{font-weight:500}
-footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:#9DB1D6;background:var(--navy-2)}
+footer{padding:30px 0 34px;background:#0A0F1E;color:#fff}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;font-weight:500}
+.foot-links a{color:#fff;text-decoration:none}
+.foot-links a:hover{color:var(--cyan)}
+.foot-links i{font-style:normal;color:rgba(255,255,255,.4)}
+.foot-code{font-size:11px;letter-spacing:.14em;color:#fff}
+.foot-copy{margin-top:14px;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.85)}
 @media(max-width:900px){
   nav{display:none;position:absolute;top:76px;left:16px;right:16px;background:var(--navy);border:1px solid var(--line-light);padding:16px;flex-direction:column}
   nav.open{display:flex}#menuBtn{display:block}
@@ -242,7 +249,13 @@ footer{padding:28px;text-align:center;font-size:12px;letter-spacing:.12em;color:
     <h2>Registrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a>
   </div></div>
 </section>
-<footer>CASA BAVARIA 2027 · EL EXCESO DE ALCOHOL ES PERJUDICIAL · SOLO +18</footer>
+<footer>
+  <div class="wrap foot-grid">
+    <nav class="foot-links"><a href="#" onclick="return false">REGLAMENTO</a><i>|</i><a href="#" onclick="return false">TÉRMINOS Y CONDICIONES</a><i>|</i><a href="#" onclick="return false">AVISO DE PRIVACIDAD</a><i>|</i><a href="#" onclick="return false">POLÍTICA DE COOKIES</a></nav>
+    <span class="foot-code">MS-CRPBA-1095-2025.</span>
+  </div>
+  <div class="wrap foot-copy">2026. © FIFCO. TODOS LOS DERECHOS RESERVADOS.</div>
+</footer>
 <script>
 document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('open');
 const header=document.querySelector('header');
