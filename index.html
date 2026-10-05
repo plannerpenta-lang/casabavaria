@@ -114,8 +114,6 @@ section{padding:84px 0}
 .final .wrap{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
 .ag-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px 40px;margin-top:60px}
 .ag-card .exp-kicker{font-size:clamp(26px,3.4vw,36px)}
-.ag-head{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:end}
-.ag-head .ag-sub{margin-top:0;padding-bottom:14px}
 .ag-sub{color:#3D4E63;font-family:'Roboto Condensed';font-weight:400;font-size:17px;margin-top:10px;max-width:60ch}
 .ag-grid{display:grid;grid-template-columns:1fr 320px;gap:36px;margin-top:30px;align-items:stretch}
 .ag-names{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
@@ -160,8 +158,6 @@ footer{padding:36px 0;background:#0A0F1E;color:#fff}
   .ag-grid{grid-template-columns:1fr}
   .ag-card{padding:32px 24px}
   .ag-names{grid-template-columns:1fr}
-  .ag-head{grid-template-columns:1fr}
-  .ag-head .ag-sub{padding-bottom:0}
   .foot3{grid-template-columns:1fr;gap:24px}
   .step{padding:24px 0 24px 24px}
   .track{grid-template-columns:1fr}
@@ -275,12 +271,10 @@ footer{padding:36px 0;background:#0A0F1E;color:#fff}
 </div>
 <div class="wrap">
   <div class="ag-card" id="agendar">
-    <div class="ag-head">
-      <div><div class="exp-dash"></div>
-      <h2 class="exp-kicker">Agendá</h2>
-      <span class="exp-script">El Plan</span></div>
-      <p class="ag-sub">Escribí los nombres de tus 10 y compartiles la invitación por WhatsApp.</p>
-    </div>
+    <div class="exp-dash"></div>
+    <h2 class="exp-kicker">Agendá</h2>
+    <span class="exp-script">El Plan</span>
+    <p class="ag-sub">Escribí los nombres de tus 10 y compartiles la invitación por WhatsApp.</p>
     <div class="ag-grid">
       <div class="ag-names" id="agNames"></div>
       <div class="ag-side">
