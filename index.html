@@ -117,14 +117,15 @@ section{padding:84px 0}
 .final .btn{margin-top:22px;font-size:14px;padding:18px 38px}
 .final p{color:#fff;font-family:'Roboto Condensed';font-weight:500;margin-top:8px}
 .step p,.hero-nota{font-weight:500}
-footer{padding:30px 0 34px;background:#0A0F1E;color:#fff}
-.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer{padding:36px 0;background:#0A0F1E;color:#fff}
+.foot3{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center}
+.foot3>img{width:84px;height:auto;display:block}
 .foot-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;font-weight:500}
 .foot-links a{color:#fff;text-decoration:none}
 .foot-links a:hover{color:var(--cyan)}
 .foot-links i{font-style:normal;color:rgba(255,255,255,.4)}
-.foot-code{font-size:11px;letter-spacing:.14em;color:#fff}
 .foot-copy{margin-top:14px;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.85)}
+.foot-code{font-size:11px;letter-spacing:.14em;color:#fff;white-space:nowrap}
 @media(max-width:900px){
   nav{display:none;position:absolute;top:76px;left:16px;right:16px;background:var(--navy);border:1px solid var(--line-light);padding:16px;flex-direction:column}
   nav.open{display:flex}#menuBtn{display:block}
@@ -134,11 +135,11 @@ footer{padding:30px 0 34px;background:#0A0F1E;color:#fff}
   .exp-script{font-size:72px}
   .part-grid{grid-template-columns:1fr;gap:28px}
   .part-grid>img{height:320px;min-height:0;position:static}
+  .foot3{grid-template-columns:1fr;gap:24px}
   .step{padding:24px 0 24px 24px}
   .track{grid-template-columns:1fr}
   .track-cover img{width:100%;height:200px}
   .time{justify-self:start}
-  .part-grid{grid-template-columns:1fr}.part-grid>img{min-height:280px}
   section{padding:60px 0}.final{padding:32px 24px}
   .hero-inner{padding:110px 20px 56px}
   .hero-script{font-size:48px;margin-top:24px}
@@ -250,11 +251,14 @@ footer{padding:30px 0 34px;background:#0A0F1E;color:#fff}
   </div></div>
 </section>
 <footer>
-  <div class="wrap foot-grid">
-    <nav class="foot-links"><a href="#" onclick="return false">REGLAMENTO</a><i>|</i><a href="#" onclick="return false">TÉRMINOS Y CONDICIONES</a><i>|</i><a href="#" onclick="return false">AVISO DE PRIVACIDAD</a><i>|</i><a href="#" onclick="return false">POLÍTICA DE COOKIES</a></nav>
+  <div class="wrap foot3">
+    <img src="imgs/SELLO-CASA-BAVARIA-BN.png" alt="Sello Casa Bavaria 2027">
+    <div>
+      <nav class="foot-links"><a href="#" onclick="return false">REGLAMENTO</a><i>|</i><a href="#" onclick="return false">TÉRMINOS Y CONDICIONES</a><i>|</i><a href="#" onclick="return false">AVISO DE PRIVACIDAD</a><i>|</i><a href="#" onclick="return false">POLÍTICA DE COOKIES</a></nav>
+      <div class="foot-copy">2026. © PENTA MARKETING. TODOS LOS DERECHOS RESERVADOS.</div>
+    </div>
     <span class="foot-code">MS-CRPBA-1095-2025.</span>
   </div>
-  <div class="wrap foot-copy">2026. © PENTA MARKETING. TODOS LOS DERECHOS RESERVADOS.</div>
 </footer>
 <script>
 document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('open');
