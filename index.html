@@ -112,6 +112,25 @@ section{padding:84px 0}
 #participar{padding-bottom:0}
 .final{margin-top:64px;background:var(--navy-2) url('imgs/textura-2.png') center/cover;color:var(--ivory);padding:88px 0}
 .final .wrap{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ag-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px 40px;margin-top:60px}
+.ag-card .exp-kicker{font-size:clamp(26px,3.4vw,36px)}
+.ag-sub{color:#3D4E63;font-family:'Roboto Condensed';font-weight:400;font-size:17px;margin-top:10px;max-width:60ch}
+.ag-grid{display:grid;grid-template-columns:1fr 320px;gap:36px;margin-top:30px;align-items:start}
+.ag-names{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.ag-field{display:flex;align-items:center;gap:10px;border-bottom:2px solid rgba(25,56,148,.18);padding:10px 2px}
+.ag-field:focus-within{border-color:var(--cyan)}
+.ag-field b{width:26px;height:26px;flex:none;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.ag-field input{border:0;outline:0;width:100%;font-family:'Roboto Condensed';font-weight:500;font-size:16px;background:transparent;color:var(--ink)}
+.ag-side{background:var(--navy-2) url('imgs/textura-2.png') center/cover;border-radius:16px;padding:34px 28px;color:#fff;text-align:center}
+.ag-count{font-family:'Roboto Condensed';font-weight:800;font-size:60px;line-height:1}
+.ag-count small{font-size:22px;color:var(--cyan)}
+.ag-label{font-size:11px;letter-spacing:.26em;color:#D5DEE8;margin-top:6px}
+.ag-bar{height:8px;background:rgba(255,255,255,.18);border-radius:99px;margin:20px 0 8px;overflow:hidden}
+.ag-bar i{display:block;height:100%;width:0;background:var(--cyan);border-radius:99px;transition:width .3s}
+.ag-picked{font-size:13px;color:#D5DEE8;min-height:40px;margin:8px 0 18px;line-height:1.5}
+.wa-btn{display:inline-block;background:#25D366;color:#06281A;font-weight:800;font-size:13px;letter-spacing:.1em;padding:15px 26px;border-radius:12px;text-decoration:none}
+.wa-btn.off{opacity:.4;pointer-events:none}
+.ag-clear{display:block;margin-top:12px;background:none;border:0;color:rgba(255,255,255,.6);font-size:12px;letter-spacing:.14em;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .final h2{font-size:clamp(30px,4vw,46px);max-width:20ch}
 .final p{color:#D5DEE8;font-family:'Roboto Condensed';font-weight:400;margin-top:10px;font-size:17px}
 .final .btn{margin-top:22px;font-size:14px;padding:18px 38px}
@@ -136,6 +155,9 @@ footer{padding:36px 0;background:#0A0F1E;color:#fff}
   .exp-script{font-size:72px}
   .part-grid{grid-template-columns:1fr;gap:28px}
   .part-grid>img{height:320px;min-height:0;position:static}
+  .ag-grid{grid-template-columns:1fr}
+  .ag-card{padding:32px 24px}
+  .ag-names{grid-template-columns:1fr}
   .foot3{grid-template-columns:1fr;gap:24px}
   .step{padding:24px 0 24px 24px}
   .track{grid-template-columns:1fr}
@@ -153,7 +175,7 @@ footer{padding:36px 0;background:#0A0F1E;color:#fff}
 <body>
 <header><div class="bar">
   <a class="brand" href="#plan"><img src="imgs/LOGO-BLANCO.png" alt="Bavaria" style="height:22px;width:auto;display:block"></a>
-  <nav id="menu"><a href="#plan">EL PLAN</a><a href="#experiencia">EXPERIENCIAS</a><a href="#participar">CÓMO PARTICIPAR</a><a href="#participar">AGENDÁ EL PLAN</a><a class="btn" href="#participar">INSCRIBÍ TU FACTURA</a></nav>
+  <nav id="menu"><a href="#plan">EL PLAN</a><a href="#experiencia">EXPERIENCIAS</a><a href="#participar">CÓMO PARTICIPAR</a><a href="#agendar">AGENDÁ EL PLAN</a><a class="btn" href="#participar">INSCRIBÍ TU FACTURA</a></nav>
   <button id="menuBtn" aria-label="Menú">☰</button>
 </div></header>
 
@@ -247,6 +269,24 @@ footer{padding:36px 0;background:#0A0F1E;color:#fff}
   <img src="imgs/titulo-participar.png" alt="Lata Bavaria Gold en la espuma del mar">
   </div>
 </div>
+<div class="wrap">
+  <div class="ag-card" id="agendar">
+    <div class="exp-dash"></div>
+    <h2 class="exp-kicker">Agendá el plan</h2>
+    <p class="ag-sub">Escribí los nombres de tus 10 y compartiles la invitación por WhatsApp.</p>
+    <div class="ag-grid">
+      <div class="ag-names" id="agNames"></div>
+      <div class="ag-side">
+        <div class="ag-count"><span id="agCount">0</span><small>/10</small></div>
+        <div class="ag-label">INVITADOS</div>
+        <div class="ag-bar"><i id="agBar"></i></div>
+        <p class="ag-picked" id="agPicked">Todavía no sumaste a nadie.</p>
+        <a class="wa-btn off" id="agSend" href="#" target="_blank" rel="noopener">ENVIAR INVITACIÓN →</a>
+        <button class="ag-clear" id="agClear" type="button">Limpiar lista</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="final" id="registrar"><div class="wrap">
     <h2>Registrate para Casa Bavaria 2027</h2><p>Registro en 1 minuto · Solo mayores de edad</p><a class="btn" href="#" onclick="return false">REGISTRARME AHORA</a>
   </div></div>
@@ -266,6 +306,19 @@ document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').c
 const header=document.querySelector('header');
 const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
 window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+const agNames=document.getElementById('agNames'),agCount=document.getElementById('agCount'),agBar=document.getElementById('agBar'),agPicked=document.getElementById('agPicked'),agSend=document.getElementById('agSend');
+for(let i=1;i<=10;i++){const f=document.createElement('label');f.className='ag-field';f.innerHTML='<b>'+i+'</b><input class="ag-input" maxlength="24" placeholder="Nombre y apellido" autocomplete="off">';agNames.appendChild(f)}
+const agInputs=[...document.querySelectorAll('.ag-input')];
+function agUpdate(){
+  const names=agInputs.map(i=>i.value.trim()).filter(Boolean);
+  agCount.textContent=names.length;agBar.style.width=(names.length*10)+'%';
+  agPicked.textContent=names.length?names.join(' · '):'Todavía no sumaste a nadie.';
+  const msg='Me gané un lugar en CASA BAVARIA 2027 y te quiero conmigo: 3 días todo pago frente al mar para mí y mis 10. ¿Te sumás?'+(names.length?' — Van: '+names.join(', '):'');
+  agSend.href='https://wa.me/?text='+encodeURIComponent(msg);
+  agSend.classList.toggle('off',!names.length);
+}
+agInputs.forEach(i=>i.addEventListener('input',agUpdate));
+document.getElementById('agClear').onclick=()=>{agInputs.forEach(i=>i.value='');agUpdate();agInputs[0].focus()};
 document.querySelectorAll('.play').forEach(b=>{b.onclick=()=>{
   const card=document.getElementById(b.dataset.t),a=card.querySelector('audio'),c=card.querySelector('[data-c]');
   const was=card.classList.contains('playing');
